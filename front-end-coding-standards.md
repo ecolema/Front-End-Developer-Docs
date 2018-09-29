@@ -86,7 +86,7 @@ minor file size savings.
 ### Indentation ###
 Indent by 4 spaces at a time.
 Don’t use tabs or mix tabs and spaces for indentation.
-```
+```html
 <ul>
     <li>Fantastic</li>
     <li>Great</li>
@@ -102,13 +102,14 @@ Use only lowercase.
 
 All code has to be lowercase: This applies to HTML element names, attributes, attribute values
 (unless `text/CDATA`), CSS selectors, properties, and property values (with the exception of strings).
-```
+```html
 <!-- Not recommended -->
 <A HREF="/">Home</A>
 
 <!-- Recommended -->
 <img src="shopwired.png" alt="ShopWired">
-
+```
+```css
 /* Not recommended */
 color: #E5E5E5;
 
@@ -120,7 +121,7 @@ color: #e5e5e5;
 Remove trailing white spaces.
 Trailing white spaces are unnecessary and can complicate diffs.
 
-```
+```html
 <!-- Not recommended -->
 <p>What? </p>
 
