@@ -4,7 +4,7 @@
   * [imageContainer](#imagecontainer)
   * [productCollection](#productcollection)
   * [productAddToBasketButton](#productaddtobasketbutton)
-  * [All plugins](#Allplugins)	
+  * [All plugins](#all-plugins)	
 ----
 
 ## productGallery ##
