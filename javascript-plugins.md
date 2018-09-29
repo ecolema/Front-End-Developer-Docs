@@ -1,23 +1,12 @@
 # JavaScript Plugins #
 - [JavaScript Plugins](#javascript-plugins)
   * [productGallery](#productgallery)
-    + [Intro](#intro)
     + [Options](#options)
   * [imageContainer](#imagecontainer)
-    + [Intro](#intro-1)
-    + [CSS](#css)
-    + [Multiple sizes (aspect ratios)](#multiple-sizes--aspect-ratios-)
     + [Options](#options-1)
   * [productCollection](#productcollection)
-    + [Intro](#intro-2)
-    + [Examples](#examples)
-      - [collection.twig](#collectiontwig)
-      - [JS:](#js-)
     + [Options](#options-2)
   * [productAddToBasketButton](#productaddtobasketbutton)
-    + [Intro](#intro-3)
-    + [Examples](#examples-1)
-      - [JS](#js)
     + [Options](#options-3)
 	
 ----
