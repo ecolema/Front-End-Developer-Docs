@@ -308,7 +308,7 @@ Specifying `type` attributes in these contexts is not necessary as HTML5 implies
 
 ```html
 <!-- Not recommended -->
-<link rel="stylesheet" href="//www.google.com/css/maia.css” type="text/css">
+<link rel="stylesheet" href="//www.google.com/css/maia.css" type="text/css">
 
 <!-- Recommended -->
 <link rel="stylesheet" href="//www.google.com/css/maia.css">
