@@ -91,108 +91,98 @@ Options can be set through data attributes (on the container) to control framing
 Data Attribute	| Default	Type | Description
 data-fit	| 1	| boolean	fits image inside container if larger
 data-scale | 0	| boolean	scales image to fit inside container irrespective of size (data-fit must also be set to 1)
-data-padding | 0	| integer (px)	creates padding between container and image
+data-padding | 0 | integer (px)	creates padding between container and image
 
 
 
-productCollection
+## productCollection ##
 Filter and paginate item collections
 
-Intro
+### Intro ###
 Collections views include category and search result product listings. The productCollection plugin controls pagination and product filters (if active) via AJAX.
 
-Examples
+### Examples ###
 Collection views normally inherit layout from the collection template `/views/templates/collection.twig`. This template contains the outer HTML, required for the plugin to work.
 
-The containing element, by default has a className ‘collection-container`, this element also holds a data attribute `data-pages` which outputs the total_pages twig variable.
+The containing element, by default has a className `collection-container`, this element also holds a data attribute `data-pages` which outputs the total_pages twig variable.
 
 All product filters, page links and products should be inside this container:
 
-collection.twig
+#### collection.twig ####
+```twig
 <div class="collection-container" data-pages="{{ total_pages|default(1) }}">
 	{% include 'partials/product_filters.twig' with { 'sorting': true } %}
 	{% block items %}{% endblock %}
 </div>
+```
 
 The pagination markup may be found in a partial file; the name the file may differ between themes. 
 
 The twig markup for the filter system should be added when installing the product filters extension.
 
-JS:
+#### JS: ####
+```javascript
 $('.collection-container').productCollection({
 	// options
 });
-
+```
 Options
-Name	Default	Type	Description
-pageLinkSelector	.page-link	string (CSS selector)	individual page links selector
-pageNumberSelector	.page-number	string (CSS selector)	optional page number container selector
-paginationContainerSelector	.pagination-container	string (CSS selector)	pagination links container
-sortOptionSelector	.sort-option	string (CSS selector)	Sort form container selector
-filterSelector	.filter	string (CSS selector)	individual filter checkbox selector
-filterGroupSelector	.filter-group	string (CSS selector)	filter group selector
-filterContainerSelector	.filter-container	string (CSS selector)	container selector for each individual filter checkbox selector
-filterCountSelector	.filter-count	string (CSS selector)	optional - selector for displaying number of items next to each filter
-filterHiddenClass	‘’	string	className used to hide filter groups
-priceRangeSelector	.price-range	string (CSS selector)	element containing filter price ranges
-containerSelector	.items	string (CSS selector)	products list container selector
-pageLinkCurrentClass	current	string	className used to denote current page
-sortOptionCurrentClass	current	string	className used to denote selected sort option
-filterCurrentClass	current	string	className used to denote selected filters
-priceRangeCurrentClass	current	string	className used to denote selected price rage
-loadingClass	loading	string	className temporally applied to items container after AJAX request is sent and before a response is received
-sortDropDownSelector	.sort-drop-down	string (CSS selector)	select element used for changing item sort order
-resetButtonSelector	.reset-button	string (CSS selector)	optional reset button for unchecking filters in the context of a filter group
-resetAllButtonSelector	.reset-all-button	string (CSS selector)	optional reset button for resetting ALL filters
-itemsPerPageDropDownSelector	.items-per-page-drop-down	string (CSS selector)	optional - className for select element for user to choose number of items per page
-ajaxValue	partials/products	string	view containing twig markup for the collection items.
-adjacentPageLinks	4	integer	truncate X number of page links
-infinite	false	boolean	set ’true’ for next items to load below current list (instead of switching to the next page)
-afterLoad	false	boolean	run a function before AJAX request
-beforeLoad	false	boolean	run a function after AJAX response
-itemsPerRequest	10	integer	Number of items loaded per request (when infinite == true)
-itemsToRefresh	10	integer	number of items to refresh (when infinite == true)
-initializeImageContainers	true	boolean	renders elements that require the imageContainer() plugin.
+Name | Default | Type | Description
+pageLinkSelector | .page-link |	string (CSS selector) | individual page links selector
+pageNumberSelector |.page-number | string (CSS selector) | optional page number container selector
+paginationContainerSelector | .pagination-container | 	string (CSS selector)	pagination links container
+sortOptionSelector | .sort-option | string (CSS selector) | Sort form container selector
+filterSelector | .filter | string (CSS selector) | individual filter checkbox selector
+filterGroupSelector | .filter-group | string (CSS selector) | filter group selector
+filterContainerSelector | .filter-container | string (CSS selector) | container selector for each individual filter checkbox selector
+filterCountSelector | .filter-count | string (CSS selector) | optional - selector for displaying number of items next to each filter
+filterHiddenClass | ''  | string | className used to hide filter groups
+priceRangeSelector | 	.price-range | 	string (CSS selector) | 	element containing filter price ranges
+containerSelector	 | .items	 | string (CSS selector) | 	products list container selector
+pageLinkCurrentClass	 | current | 	string	 | className used to denote current page
+sortOptionCurrentClass | current | string | className used to denote selected sort option
+filterCurrentClass | current | string | className used to denote selected filters
+priceRangeCurrentClass | current | string | className used to denote selected price rage
+loadingClass | loading | string | className temporally applied to items container after AJAX request is sent and before a response is received
+sortDropDownSelector | .sort-drop-down | string (CSS selector) | 	select element used for changing item sort order
+resetButtonSelector	 | .reset-button	 | string (CSS selector)	 | optional reset button for unchecking filters in the context of a filter group
+resetAllButtonSelector | 	.reset-all-button	 | string (CSS selector) | 	optional reset button for resetting ALL filters
+itemsPerPageDropDownSelector	 | .items-per-page-drop-down | 	string (CSS selector) | 	optional - className for select element for user to choose number of items per page
+ajaxValue | 	partials/products | string | view containing twig markup for the collection items.
+adjacentPageLinks | 4 | integer | truncate X number of page links
+infinite | false | boolean | set `true` for next items to load below current list (instead of switching to the next page)
+afterLoad | false | boolean | run a function before AJAX request
+beforeLoad | false | boolean | run a function after AJAX response
+itemsPerRequest | 10 | integer | Number of items loaded per request (when infinite == true)
+itemsToRefresh | 10 | integer | number of items to refresh (when infinite == true)
+initializeImageContainers | true | boolean | renders elements that require the imageContainer() plugin.
 
 
-productAddToBasketButton
+## productAddToBasketButton ##
 The soft add to basket feature must be enabled for the plugin to work.
 
-Intro
+### Intro ###
 The button prevents shoppers from being redirected to the checkout page immediately after adding a product to their basket. Instead, a modal box will appear confirming the basket contents (including the item just added).
 
+### Examples ###
+
+`product.twig`
+When the feature is enabled a className should be added to the `add to basket` button.
+```twig
+	<button class="btn button-add-to-basket full-sm add-button {{ global.features.ajax_basket ? 'product-soft-add-button' : '' }}" name="cart_button”>…</button>
+```
 
 
-Examples
+#### JS####
+```javascript
+	$('.product-soft-add-button').productAddToBasketButton({
+		// options
+	});
+```
 
-product.twig
-When the feature is enabled a className should be added to the ‘add to basket’ button.
-
-<button class="btn button-add-to-basket full-sm add-button {{ global.features.ajax_basket ? 'product-soft-add-button' : '' }}" name="cart_button”>…</button>
-
-
-JS:
-$('.product-soft-add-button').productAddToBasketButton({
-	// options
-});
-
-
-Options
-Name	Default	Description
-view	partials/basket_items	view containing twig markup that displays the items list inside the modal box
-totalSelector	.shopwired-basket-total-value	optional - CSS selector for the value of the shopping basket. 
-modalSelector	.shopwired-basket-modal	selector for hidden modal box
-error	function	By default error dialogue is displayed as a simple javascript alert. To change this behaviour, create your own function. The argument for message text is `message`.
-
-
-See attached documentation for JS plugins we intend to use going forward.
-
-As I understand, these plugins were written by Radu. If that’s right then I think it would be helpful if he could read the attached - to ensure it’s all correct.
-
-—
-
-For some of new themes, productAddToBasketButton couldn’t be used because an ‘off canvas’ style view is used in place of the popup modal box.
-
-Do you think we should add the alternative plugin to the main plugins file? Or perhaps merge both types into a single plugins with an option to switch between ‘popup’ and ‘off canvas’. I think we would have to ensure backwards compatibility for older themes. Radu’s opinion would be useful here if that’s the preferred option.
-
-
+### Options ###
+Name | Default | Description
+view | partials/basket_items | view containing twig markup that displays the items list inside the modal box
+totalSelector | .shopwired-basket-total-value | optional - CSS selector for the value of the shopping basket. 
+modalSelector | .shopwired-basket-modal | selector for hidden modal box
+error | function | By default error dialogue is displayed as a simple javascript alert. To change this behaviour, create your own function. The argument for message text is `message`.
