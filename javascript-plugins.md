@@ -211,3 +211,31 @@ Name | Default | Description
 `totalSelector` | `.shopwired-basket-total-value` | optional - CSS selector for the value of the shopping basket. 
 `modalSelector` | `.shopwired-basket-modal` | selector for hidden modal box
 `error` | `function` | By default error dialogue is displayed as a simple javascript alert. To change this behaviour, create your own function. The argument for message text is `message`.
+
+## All plugins 
+
+Plugin | Function | Description
+--- | --- | ---
+`grid` | Grid | Arranges items into a grid layout
+`productVideoButton` | Watch video button | Displays video when clicked.
+`productSortDropDown` | Sort drop down | Used to sort product listings
+`quantityBox` | Quantity box | Plus / minus toggle for input containing integer
+`addressForm` | Address form | Used to show/hide checkout address section and copy field values
+`listWithDropDown` | List with drop down | Expandable menu
+`customCheckBox` | Custom check box | For styling of checkbox inputs
+`imageZoomer` | Image zoomer | Roll over image zoom
+`productGallery` | Gallery thumbnails | click image thimbnails to show as main image
+`productFilter` | Product filter | Filters product collections
+`imageContainer` | Image container | Uniforms the appearance of product images
+`ajaxForm` | AJAX form | Submit form without reloading page
+`linkWithConfirmation` | Link with confirmation | Helper for js confirm() when link is clicked
+`checkoutAddressForm` | Checkout address form | For checkout form
+`formWithValidation` | Form with validation | Inloine form validation
+`infoMessage` | Info message | displays popup banner notifications
+`basketDeliveryForm` | Basket delivery form | Basket page
+`productForm` | Product form | For product page form
+`productCollection` | Product collection | supports filters and pagination
+`productAddToBasketButton` | Product add to basket button | Soft add to basket
+`toggleButton` | Toggle button | toggleButton
+`stateDropDown` | State drop down | outpus select options for US states when country select is changed
+`productFinder` | Product finder | queries '/search/product-finder-values' to retrive products when option selected
