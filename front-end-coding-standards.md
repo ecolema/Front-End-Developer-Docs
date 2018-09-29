@@ -63,7 +63,7 @@ sheets, and scripts unless the respective files are not available over both prot
 
 Omitting the protocol - which makes the URL relative - prevents mixed content issues and results in
 minor file size savings.
-```
+```html
 <!-- Not recommended -->
 <script src="https://www.google.com/js/gweb/analytics/autotrack.js"></script>
 
@@ -92,7 +92,8 @@ Don’t use tabs or mix tabs and spaces for indentation.
     <li>Fantastic</li>
     <li>Great</li>
 </ul>
-
+```
+```css
 .example {
     color: blue;
 }
@@ -103,7 +104,7 @@ Use only lowercase.
 
 All code has to be lowercase: This applies to HTML element names, attributes, attribute values
 (unless `text/CDATA`), CSS selectors, properties, and property values (with the exception of strings).
-```
+```html
 <!-- Not recommended -->
 <A HREF="/">Home</A>
 
@@ -496,7 +497,7 @@ Using namespaces helps preventing naming conflicts and can make maintenance easi
 ### ID and Class Name Delimiters ###
 Separate words in ID and class names by a hyphen.
 Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.
-```
+```css
 /* Not recommended: does not separate the words “demo” and “image” */
 .demoimage {}
 
@@ -522,7 +523,7 @@ Put declarations in alphabetical order in order to achieve consistent code in a 
 
 Ignore vendor-specific prefixes for sorting purposes. However, multiple vendor-specific prefixes for a certain CSS property should be kept sorted (e.g. -moz prefix comes before -webkit).
 
-```
+```css
 background: fuchsia;
 border: 1px solid;
 -moz-border-radius: 4px;
@@ -536,7 +537,7 @@ text-indent: 2em;
 ### Block Content Indentation ###
 *Indent all block content.*
 Indent all block content, that is rules within rules as well as declarations, so to reflect hierarchy and improve understanding.
-```
+```css
 @media screen, projection {
     html {
         background: #fff;
@@ -548,7 +549,7 @@ Indent all block content, that is rules within rules as well as declarations, so
 ### Declaration Stops ###
 Use a semicolon after every declaration.
 End every declaration with a semicolon for consistency and extensibility reasons.
-```
+```css
 /* Not recommended */
 .test {
     display: block;
@@ -566,7 +567,7 @@ End every declaration with a semicolon for consistency and extensibility reasons
 Use a space after a property name’s colon.
 
 Always use a single space between property and value (but no space between property and colon) for consistency reasons.
-```
+```css
 /* Not recommended */
 h3 {
     font-weight:bold;
@@ -583,7 +584,7 @@ Use a space between the last selector and the declaration block.
 Always use a single space between the last selector and the opening brace that begins the declaration block.
 
 The opening brace should be on the same line as the last selector in a given rule.
-```
+```css
 /* Not recommended: missing space */
 .video{
     margin-top: 1em;
@@ -605,7 +606,7 @@ The opening brace should be on the same line as the last selector in a given rul
 Separate selectors and declarations by new lines.
 Always start a new line for each selector and declaration.
 
-```
+```css
 /* Not recommended */
 a:focus, a:active {
     position: relative; top: 1px;
@@ -622,7 +623,7 @@ h3 {
  ### Rule Separation ###
 Separate rules by new lines.
 Always put a blank line (two line breaks) between rules.
-```
+```css
 html {
     background: #fff;
 }
@@ -637,7 +638,7 @@ Use single quotation marks for attribute selectors and property values.
 Use single ('') rather than double ("") quotation marks for attribute selectors or property values. Do not use quotation marks in URI values (url()).
 
 Exception: If you do need to use the @charset rule, use double quotation marks—single quotation marks are not permitted.
-```
+```css
 /* Not recommended */
 @import url("//www.google.com/css/maia.css");
 
@@ -657,7 +658,7 @@ html {
 ### Section Comments ###
 Group sections by a section comment (optional).
 If possible, group style sheet sections together by using comments. Separate sections with new lines.
-```
+```css
 /* Header */
 .adw-header {}
 
