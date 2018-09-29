@@ -31,9 +31,10 @@ $('.product-gallery').productGallery();
 ```
 
 ### Options ###
-Name	| Default	| Description
-thumbnailSelector	| `.product-gallery-thumbnail`	| thumbnails container CSS selector
-photoSelector	| `.product-gallery-photo`	| Main image CSS selector
+Name	| Default| Description
+--- | --- | ---
+thumbnailSelector | `.product-gallery-thumbnail`	| thumbnails container CSS selector
+photoSelector | `.product-gallery-photo`	| Main image CSS selector
 
 
 ## imageContainer ##
@@ -89,6 +90,7 @@ Example:
 Options can be set through data attributes (on the container) to control framing of the inner image.
 
 Data Attribute	| Default	Type | Description
+--- | --- | ---
 data-fit	| 1	| boolean	fits image inside container if larger
 data-scale | 0	| boolean	scales image to fit inside container irrespective of size (data-fit must also be set to 1)
 data-padding | 0 | integer (px)	creates padding between container and image
@@ -127,6 +129,7 @@ $('.collection-container').productCollection({
 });
 ```
 Options
+--- | --- | --- | ---
 Name | Default | Type | Description
 pageLinkSelector | .page-link |	string (CSS selector) | individual page links selector
 pageNumberSelector |.page-number | string (CSS selector) | optional page number container selector
@@ -182,6 +185,7 @@ When the feature is enabled a className should be added to the `add to basket` b
 
 ### Options ###
 Name | Default | Description
+--- | --- | ---
 view | partials/basket_items | view containing twig markup that displays the items list inside the modal box
 totalSelector | .shopwired-basket-total-value | optional - CSS selector for the value of the shopping basket. 
 modalSelector | .shopwired-basket-modal | selector for hidden modal box
