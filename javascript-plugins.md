@@ -131,34 +131,34 @@ $('.collection-container').productCollection({
 ### Options ###
 Name | Default | Type | Description
 --- | --- | --- | ---
-pageLinkSelector | `.page-link` |	string (CSS selector) | individual page links selector
-pageNumberSelector | `.page-number` | string (CSS selector) | optional page number container selector
-paginationContainerSelector | `.pagination-container` | 	string (CSS selector)	pagination links container
-sortOptionSelector | `.sort-option` | string (CSS selector) | Sort form container selector
-filterSelector | `.filter` | string (CSS selector) | individual filter checkbox selector
-filterGroupSelector | `.filter-group` | string (CSS selector) | filter group selector
-filterContainerSelector | `.filter-container` | string (CSS selector) | container selector for each individual filter checkbox selector
-filterCountSelector | `.filter-count` | string (CSS selector) | optional - selector for displaying number of items next to each filter
-filterHiddenClass | `''`  | string | className used to hide filter groups
-priceRangeSelector | `.price-range` | 	string (CSS selector) | 	element containing filter price ranges
-containerSelector	 | `.items` | string (CSS selector) | 	products list container selector
-pageLinkCurrentClass	 | `current` | 	string	 | className used to denote current page
-sortOptionCurrentClass | `current` | string | className used to denote selected sort option
-filterCurrentClass | `current` | string | className used to denote selected filters
-priceRangeCurrentClass | `current` | string | className used to denote selected price rage
-loadingClass | `loading` | string | className temporally applied to items container after AJAX request is sent and before a response is received
-sortDropDownSelector | `.sort-drop-down` | string (CSS selector) | 	select element used for changing item sort order
-resetButtonSelector	 | `.reset-button`	 | string (CSS selector)	 | optional reset button for unchecking filters in the context of a filter group
-resetAllButtonSelector | 	`.reset-all-button`	 | string (CSS selector) | 	optional reset button for resetting ALL filters
-itemsPerPageDropDownSelector	 | `.items-per-page-drop-down` | 	string (CSS selector) | 	optional - className for select element for user to choose number of items per page
-ajaxValue | 	`partials/products` | string | view containing twig markup for the collection items.
-adjacentPageLinks | `4` | integer | truncate X number of page links
-infinite | `false` | boolean | set `true` for next items to load below current list (instead of switching to the next page)
-afterLoad | `false` | boolean | run a function before AJAX request
-beforeLoad | `false` | boolean | run a function after AJAX response
-itemsPerRequest | `10` | integer | Number of items loaded per request (when infinite == true)
-itemsToRefresh | `10` | integer | number of items to refresh (when infinite == true)
-initializeImageContainers | `true` | boolean | renders elements that require the imageContainer() plugin.
+`pageLinkSelector` | `.page-link` |	string (CSS selector) | individual page links selector
+`pageNumberSelector` | `.page-number` | string (CSS selector) | optional page number container selector
+`paginationContainerSelector` | `.pagination-container` | 	string (CSS selector)	pagination links container
+`sortOptionSelector` | `.sort-option` | string (CSS selector) | Sort form container selector
+`filterSelector` | `.filter` | string (CSS selector) | individual filter checkbox selector
+`filterGroupSelector` | `.filter-group` | string (CSS selector) | filter group selector
+`filterContainerSelector` | `.filter-container` | string (CSS selector) | container selector for each individual filter checkbox selector
+`filterCountSelector` | `.filter-count` | string (CSS selector) | optional - selector for displaying number of items next to each filter
+`filterHiddenClass` | `''`  | string | className used to hide filter groups
+`priceRangeSelector` | `.price-range` | 	string (CSS selector) | 	element containing filter price ranges
+`containerSelector`	 | `.items` | string (CSS selector) | 	products list container selector
+`pageLinkCurrentClass`	 | `current` | 	string	 | className used to denote current page
+`sortOptionCurrentClass` | `current` | string | className used to denote selected sort option
+`filterCurrentClass` | `current` | string | className used to denote selected filters
+`priceRangeCurrentClass` | `current` | string | className used to denote selected price rage
+`loadingClass` | `loading` | string | className temporally applied to items container after AJAX request is sent and before a response is received
+`sortDropDownSelector` | `.sort-drop-down` | string (CSS selector) | 	select element used for changing item sort order
+`resetButtonSelector`	 | `.reset-button`	 | string (CSS selector)	 | optional reset button for unchecking filters in the context of a filter group
+`resetAllButtonSelector` | 	`.reset-all-button`	 | string (CSS selector) | 	optional reset button for resetting ALL filters
+`itemsPerPageDropDownSelector`	 | `.items-per-page-drop-down` | 	string (CSS selector) | 	optional - className for select element for user to choose number of items per page
+`ajaxValue` | 	`partials/products` | string | view containing twig markup for the collection items.
+`adjacentPageLinks` | `4` | integer | truncate X number of page links
+`infinite` | `false` | boolean | set `true` for next items to load below current list (instead of switching to the next page)
+`afterLoad` | `false` | boolean | run a function before AJAX request
+`beforeLoad` | `false` | boolean | run a function after AJAX response
+`itemsPerRequest` | `10` | integer | Number of items loaded per request (when infinite == true)
+`itemsToRefresh` | `10` | integer | number of items to refresh (when infinite == true)
+`initializeImageContainers` | `true` | boolean | renders elements that require the imageContainer() plugin.
 
 
 ## productAddToBasketButton ##
