@@ -69,7 +69,8 @@ minor file size savings.
 
 <!-- Recommended -->
 <script src="//www.google.com/js/gweb/analytics/autotrack.js"></script>
-
+```
+```css
 /* Not recommended */
 .example {
     background: url(https://www.shopwired.net/images/example);
@@ -102,7 +103,7 @@ Use only lowercase.
 
 All code has to be lowercase: This applies to HTML element names, attributes, attribute values
 (unless `text/CDATA`), CSS selectors, properties, and property values (with the exception of strings).
-```html
+```
 <!-- Not recommended -->
 <A HREF="/">Home</A>
 
@@ -111,10 +112,13 @@ All code has to be lowercase: This applies to HTML element names, attributes, at
 ```
 ```css
 /* Not recommended */
-color: #E5E5E5;
-
+.foo {
+    color: #E5E5E5;
+}
 /* Recommended */
-color: #e5e5e5;
+.foo {
+    color: #e5e5e5;
+}
 ```
 
 ## Trailing Whitespace ##
@@ -155,7 +159,7 @@ Append a contact (username or mailing list) in parentheses as with the format `T
 
 Append action items after a colon as in `TODO: action item`.
 
-```
+```html
 <!-- TODO: Add Category names -->
 <ul>
     <li>Lorem</li>
@@ -177,7 +181,7 @@ Use valid HTML where possible.
 Use valid HTML code unless that is not possible due to otherwise unattainable performance goals regarding file size.
 Use tools such as the W3C HTML validator to test.
 Using valid HTML is a measurable baseline quality attribute that contributes to learning about technical requirements and constraints, and that ensures proper HTML usage.
-```
+```html
 <!-- Not recommended -->
 <title>Test</title>
 <article>This is only a test.
@@ -194,7 +198,7 @@ Use HTML according to its purpose.
 
 Use elements (sometimes incorrectly called “tags”) for what they have been created for. For example, use heading elements for headings, p elements for paragraphs, a elements for anchors, etc.
 Using HTML according to its purpose is important for accessibility, reuse, and code efficiency reasons.
-```
+```html
 <!-- Not recommended -->
 <img src="spreadsheet.png">
 
@@ -232,7 +236,7 @@ possible from documents and templates.
 Separating structure from presentation from behaviour is important for maintenance reasons. It is
 always more expensive to change HTML documents and templates than it is to update style sheets
 and scripts.
-```
+```html
 <!-- Not recommended -->
 <!DOCTYPE html>
 <title>HTML sucks</title>
@@ -263,7 +267,7 @@ encoding (UTF-8) is used for files and editors as well as among teams.
 
 The only exceptions apply to characters with special meaning in HTML (like `<` and `&`) as well as
 control or 'invisible' characters (like no-break spaces).
-```
+```html
 <!-- Not recommended -->
 The currency symbol for the Euro is &ldquo;&eur;&rdquo;.
 
@@ -278,7 +282,7 @@ compatibility and clarity of document structure.
 
 Generally speaking, self-closing XML (i.e. XHTML, XML) style tags are not necessary.
 
-```
+```html
 <!-- Not recommended - closing "/" is not necessary -->
 <img src="/logo.png" alt="Shopwired">
 
@@ -301,7 +305,7 @@ JavaScript).
 Specifying `type` attributes in these contexts is not necessary as HTML5 implies `text/css` and
 `text/javascript` as defaults. This can be safely done even for older browsers.
 
-```
+```html
 <!-- Not recommended -->
 <link rel="stylesheet" href="//www.google.com/css/maia.css” type="text/css">
 
@@ -324,7 +328,7 @@ Also, indent them if they are child elements of a block, list, or table element.
 (If you run into issues around whitespace between list items it’s acceptable to put all li elements in one
 line. A linter is encouraged to throw a warning instead of an error.)
 
-```
+```html
 <blockquote>
     <p>
         <em>Space</em>, the final frontier.
@@ -351,7 +355,7 @@ line. A linter is encouraged to throw a warning instead of an error.)
 ### HTML Quotation Marks ###
 When quoting attributes values, use double quotation marks.
 Use double `""` rather than single quotation marks `''` around attribute values.
-```
+```html
 <!-- Not recommended -->
 <a class='maia-button maia-button-secondary'>Sign in</a>
 
@@ -374,7 +378,7 @@ Names that are specific and reflect the purpose of the element should be preferr
 Generic names are simply a fallback for elements that have no particular or no meaning different from their siblings. They are typically needed as 'helpers'.
 Using functional or generic names reduces the probability of unnecessary document or template changes.
 
-```
+```css
 /* Not recommended: meaningless */
 .yee-1901 {}
 
@@ -401,7 +405,7 @@ Try to convey what an ID or class is about while being as brief as possible.
 Using ID and class names this way contributes to acceptable levels of understandability and code
 efficiency.
 
-```
+```css
 /* Not recommended */
 .navigation {}
 .atr {}
@@ -418,7 +422,7 @@ Unless necessary (for example with helper classes), do not use element names in 
 
 Avoiding unnecessary ancestor selectors is useful for performance reasons.
 
-```
+```css
 /* Not recommended */
 ul.example {}
 div.error {}
@@ -434,41 +438,45 @@ Use shorthand properties where possible.
 CSS offers a variety of shorthand properties (like `font`) that should be used whenever possible, even in cases where only one value is explicitly set.
 Using shorthand properties is useful for code efficiency and understandability.
 
-```
+```css
 /* Not recommended */
-border-top-style: none;
-font-family: palatino, georgia, serif;
-font-size: 100%;
-line-height: 1.6;
-padding-bottom: 2em;
-padding-left: 1em;
-padding-right: 1em;
-padding-top: 0;
+.foo {
+    border-top-style: none;
+    font-family: palatino, georgia, serif;
+    font-size: 100%;
+    line-height: 1.6;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0;
+}
 
 /* Recommended */
-border-top: 0;
-font: 100%/1.6 palatino, georgia, serif;
-padding: 0 1em 2em;
+.foo {
+    border-top: 0;
+    font: 100%/1.6 palatino, georgia, serif;
+    padding: 0 1em 2em;
+}
 ```
 
 ### 0 and Units ###
 Omit unit specification after `0` values.
 Do not use units after `0` values unless they are required.
-```
+```css
 margin: 0; 
 padding: 0;
 ```
 ### Leading 0s ###
 Omit leading `0`s in values.
 Do not use put 0s in front of values or lengths between `-1` and `1`.
-```
+```css
     font-size: .8em;
 ```
 
 ### Hexadecimal Notation ###
 Use 3 character hexadecimal notation where possible.
 For color values that permit it, 3 character hexadecimal notation is shorter and more succinct.
-```
+```css
 /* Not recommended */
 color: #eebbcc;
 
@@ -480,7 +488,7 @@ color: #ebc;
 Prefix selectors with an application-specific prefix (optional).
 In large projects as well as for code that gets embedded in other projects or on external sites use prefixes (as namespaces) for ID and class names. Use short, unique identifiers followed by a dash.
 Using namespaces helps preventing naming conflicts and can make maintenance easier, for example in search and replace operations.
-```
+```css
 .adw-help {} /* AdWords */
 .maia-note {} /* Maia */
 ```
