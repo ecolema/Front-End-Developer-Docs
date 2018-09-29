@@ -1,5 +1,26 @@
 # JavaScript Plugins #
-
+- [JavaScript Plugins](#javascript-plugins)
+  * [productGallery](#productgallery)
+    + [Intro](#intro)
+    + [Options](#options)
+  * [imageContainer](#imagecontainer)
+    + [Intro](#intro-1)
+    + [CSS](#css)
+    + [Multiple sizes (aspect ratios)](#multiple-sizes--aspect-ratios-)
+    + [Options](#options-1)
+  * [productCollection](#productcollection)
+    + [Intro](#intro-2)
+    + [Examples](#examples)
+      - [collection.twig](#collectiontwig)
+      - [JS:](#js-)
+    + [Options](#options-2)
+  * [productAddToBasketButton](#productaddtobasketbutton)
+    + [Intro](#intro-3)
+    + [Examples](#examples-1)
+      - [JS](#js)
+    + [Options](#options-3)
+	
+----
 
 ## productGallery ##
 Toggle product view main image.
@@ -33,8 +54,8 @@ $('.product-gallery').productGallery();
 ### Options ###
 Name	| Default| Description
 --- | --- | ---
-thumbnailSelector | `.product-gallery-thumbnail`	| thumbnails container CSS selector
-photoSelector | `.product-gallery-photo`	| Main image CSS selector
+`thumbnailSelector` | `.product-gallery-thumbnail`	| thumbnails container CSS selector
+`photoSelector` | `.product-gallery-photo`	| Main image CSS selector
 
 
 ## imageContainer ##
@@ -89,11 +110,11 @@ Example:
 ### Options ###
 Options can be set through data attributes (on the container) to control framing of the inner image.
 
-Data Attribute	| Default	Type | Description
+Data Attribute	| Default Type | Description
 --- | --- | ---
-data-fit	| 1	| boolean	fits image inside container if larger
-data-scale | 0	| boolean	scales image to fit inside container irrespective of size (data-fit must also be set to 1)
-data-padding | 0 | integer (px)	creates padding between container and image
+`data-fit` | `1`| boolean fits image inside container if larger
+`data-scale` | `0` | boolean scales image to fit inside container irrespective of size (data-fit must also be set to 1)
+`data-padding` | `0` | integer (`px`) creates padding between container and image
 
 
 
@@ -106,7 +127,7 @@ Collections views include category and search result product listings. The produ
 ### Examples ###
 Collection views normally inherit layout from the collection template `/views/templates/collection.twig`. This template contains the outer HTML, required for the plugin to work.
 
-The containing element, by default has a className `collection-container`, this element also holds a data attribute `data-pages` which outputs the total_pages twig variable.
+The containing element, by default has a className `collection-container`, this element also holds a data attribute `data-pages` which outputs the `{{ total_pages }}` twig variable.
 
 All product filters, page links and products should be inside this container:
 
