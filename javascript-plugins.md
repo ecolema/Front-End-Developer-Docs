@@ -1,14 +1,10 @@
 # JavaScript Plugins #
 - [JavaScript Plugins](#javascript-plugins)
   * [productGallery](#productgallery)
-    + [Options](#options)
   * [imageContainer](#imagecontainer)
-    + [Options](#options-1)
   * [productCollection](#productcollection)
-    + [Options](#options-2)
   * [productAddToBasketButton](#productaddtobasketbutton)
-    + [Options](#options-3)
-	
+  * [All plugins](#Allplugins)	
 ----
 
 ## productGallery ##
