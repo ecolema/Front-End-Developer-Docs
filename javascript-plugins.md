@@ -128,9 +128,9 @@ $('.collection-container').productCollection({
 	// options
 });
 ```
-Options
---- | --- | --- | ---
+### Options ###
 Name | Default | Type | Description
+--- | --- | --- | ---
 pageLinkSelector | .page-link |	string (CSS selector) | individual page links selector
 pageNumberSelector |.page-number | string (CSS selector) | optional page number container selector
 paginationContainerSelector | .pagination-container | 	string (CSS selector)	pagination links container
