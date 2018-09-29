@@ -464,25 +464,31 @@ Using shorthand properties is useful for code efficiency and understandability.
 Omit unit specification after `0` values.
 Do not use units after `0` values unless they are required.
 ```css
-margin: 0; 
-padding: 0;
+.foo {
+    margin: 0; 
+    padding: 0;
+}
 ```
 ### Leading 0s ###
 Omit leading `0`s in values.
 Do not use put 0s in front of values or lengths between `-1` and `1`.
 ```css
+.foo {
     font-size: .8em;
+}
 ```
 
 ### Hexadecimal Notation ###
 Use 3 character hexadecimal notation where possible.
 For color values that permit it, 3 character hexadecimal notation is shorter and more succinct.
 ```css
-/* Not recommended */
-color: #eebbcc;
+.foo {
+    /* Not recommended */
+    color: #eebbcc;
 
-/* Recommended */
-color: #ebc;
+    /* Recommended */
+    color: #ebc;
+}
 ```
 
 ### Prefixes ###
@@ -524,14 +530,16 @@ Put declarations in alphabetical order in order to achieve consistent code in a 
 Ignore vendor-specific prefixes for sorting purposes. However, multiple vendor-specific prefixes for a certain CSS property should be kept sorted (e.g. -moz prefix comes before -webkit).
 
 ```css
-background: fuchsia;
-border: 1px solid;
--moz-border-radius: 4px;
--webkit-border-radius: 4px;
-border-radius: 4px;
-color: black;
-text-align: center;
-text-indent: 2em;
+.foo {
+    background: fuchsia;
+    border: 1px solid;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    color: black;
+    text-align: center;
+    text-indent: 2em;
+}
 ```
 
 ### Block Content Indentation ###
