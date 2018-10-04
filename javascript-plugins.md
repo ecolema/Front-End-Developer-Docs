@@ -224,4 +224,3 @@ Plugin | Function | Description
 `toggleButton` | Toggle button | toggleButton
 `stateDropDown` | State drop down | outpus select options for US states when country select is changed
 `productFinder` | Product finder | queries '/search/product-finder-values' to retrive products when option selected
-
