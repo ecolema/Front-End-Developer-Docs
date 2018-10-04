@@ -64,21 +64,21 @@ Example HTML
 ### CSS ###
 The plugin depends on the following CSS:
 ```css
-  .image-container {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    height: 0;
-    padding-top: 100%;
-  }
-  
-  .image-container img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: auto;
-    height: auto;
-  }
+.image-container {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	height: 0;
+	padding-top: 100%;
+}
+
+.image-container img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: auto;
+	height: auto;
+}
 ```
 > NOTE: the container’s padding (padding-top: 100%), combined with `height: 0` ensures containers are rendered as exact squares. In some circumstances, where a different size ratio is desired, the padding can be adjusted in the CSS. 
 
@@ -88,7 +88,7 @@ We recommend sub classing the container element should a variety of container si
 Example:
 ```css
 .image-container.letterbox {
-  padding-top: 50%;
+	padding-top: 50%;
 }
 ```
 
@@ -178,15 +178,15 @@ The button prevents shoppers from being redirected to the checkout page immediat
 `product.twig`
 When the feature is enabled a className should be added to the `add to basket` button.
 ```twig
-	<button class="btn button-add-to-basket full-sm add-button {{ global.features.ajax_basket ? 'product-soft-add-button' : '' }}" name="cart_button”>…</button>
+<button class="btn button-add-to-basket full-sm add-button {{ global.features.ajax_basket ? 'product-soft-add-button' : '' }}" name="cart_button”>…</button>
 ```
 
 
 #### JS ####
 ```javascript
-	$('.product-soft-add-button').productAddToBasketButton({
-		// options
-	});
+$('.product-soft-add-button').productAddToBasketButton({
+	// options
+});
 ```
 
 ### Options ###
