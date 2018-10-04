@@ -365,16 +365,17 @@ Use double `""` rather than single quotation marks `''` around attribute values.
 ```
 
 ## CSS Style Rules ##
+> Please cosider [CSS specificity](https://stuffandnonsense.co.uk/archives/css_specificity_wars.html) when creating selectors.
 
 ### CSSValidity ###
 Use valid CSS where possible.
 Unless dealing with CSS validator bugs or requiring proprietary syntax, use valid CSS code.
-Use tools such as the W3C CSS validator to test.
+Use tools such as the [W3C CSS validator](https://validator.w3.org/) to test.
 Using valid CSS is a measurable baseline quality attribute that allows spotting CSS code that may not have any effect and can be removed, and that ensures proper CSS usage.
 
-### ID and Class Naming ###
-Use meaningful or generic ID and class names.
-Instead of presentational or cryptic names, always use ID and class names that reflect the purpose of the element in question, or that are otherwise generic.
+### Class Naming ###
+Use meaningful or generic class names.
+Instead of presentational or cryptic names, always use class names that reflect the purpose of the element in question, or that are otherwise generic.
 Names that are specific and reflect the purpose of the element should be preferred as these are most understandable and the least likely to change.
 Generic names are simply a fallback for elements that have no particular or no meaning different from their siblings. They are typically needed as 'helpers'.
 Using functional or generic names reduces the probability of unnecessary document or template changes.
